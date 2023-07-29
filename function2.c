@@ -1,5 +1,9 @@
 #include "main.h"
 
+/**
+ * comments here
+ * 
+ */
 int print_pointer(va_list types, char buffer[],
 int flags, int width, int precision, int size)
 {
@@ -28,7 +32,7 @@ extra_c = '+', length++;
 else if (flags & F_SPACE)
 extra_c = ' ', length++;
 ind++;
-
+/*return (write(1, &buffer[i], BUFF_SIZE - i - 1));*/
 return (write_pointer(buffer, ind, length,
 width, flags, padd, extra_c, padd_start));
 }
@@ -56,6 +60,8 @@ buffer[i + offset] = '\0';
 return (write(1, buffer, i + offset));
 }
 
+
+
 int print_reverse(va_list types, char buffer[],
 int flags, int width, int precision, int size)
 {
@@ -81,7 +87,6 @@ count++;
 }
 return (count);
 }
-
 
 
 int print_rot13string(va_list types, char buffer[],

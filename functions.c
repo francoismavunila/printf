@@ -1,12 +1,15 @@
 #include "main.h"
 
+/**
+ * print_char - Prints a char
+ * comments here
+ */
 int print_char(va_list types, char buffer[],
 int flags, int width, int precision, int size)
 {
 char c = va_arg(types, int);
 return (handle_write_char(c, buffer, flags, width, precision, size));
 }
-
 
 int print_string(va_list types, char buffer[],
 int flags, int width, int precision, int size)
@@ -48,8 +51,6 @@ return (width);
 return (write(1, str, length));
 }
 
-
-
 int print_percent(va_list types, char buffer[],
 int flags, int width, int precision, int size)
 {
@@ -61,8 +62,6 @@ UNUSED(precision);
 UNUSED(size);
 return (write(1, "%%", 1));
 }
-
-
 
 int print_int(va_list types, char buffer[],
 int flags, int width, int precision, int size)
@@ -89,8 +88,6 @@ num /= 10;
 i++;
 return (write_number(is_negative, i, buffer, flags, width, precision, size));
 }
-
-
 
 int print_binary(va_list types, char buffer[],
 int flags, int width, int precision, int size)
