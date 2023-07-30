@@ -2,8 +2,7 @@
 
 int get_flags(const char *format, int *i)
 {
-/* ddiegb /
-/* ueuevyuegeuygeyug*/
+
 int j, curr_i;
 int flags = 0;
 const char FLAGS_CH[] = {'-', '+', '0', '#', ' ', '\0'};
